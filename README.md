@@ -29,33 +29,102 @@
 
 ## 🔧 Navi Components
 
+
+<div id="header" align="center">
+  <h3 align="center">Navi Surface</h3>
+</div>
+
+
+
 <div align="center">
   <img align="left" src="https://github.com/KeiTagura/Navi_Tech/blob/main/Inspector_NaviSurface.png" width="300" />
 
-<div align="left">
+  <div align="left">
 
-|         Parameter          |                    Details                      |
-| :------------------------: | :---------------------------------------------: |
-|          `Plane`           |         Sets the axis plane for pathing         |
-|     `Position Offset`      |Sets the position offset for the grid as a hole  |
-|                            |                                                 |
-|        `NodeType`          |    Hexagon or Square grid layout/offset         |
-|    `Surface Grid Size`     |       Set the number of the grid cells          |
-|       `Node Radius`        |     Sets the size of the each grid cell         |
-|                            |                                                 |
-|      `Include Layers`      |Set what layers should be scanned for obstacles  |
-|    `Collection Objects`    |     Set local or global scan for obstacles      |
-|`Obstacle Proximity Penalty`|Set the pentaly cost for pathing near an obstacle|
-|                            |                                                 |
-|      `Display Grid`        |          Toggle debug grid visablity            |
-|  `Display Penalty Cost`    |         Toggle debug penalty visablity          |
-|  `Display Grid Position`   |      Toggle debug grid position visablity       |
+  |         Parameter          |                    Details                      |
+  | :------------------------: | :---------------------------------------------: |
+  |          `Plane`           |         Sets the axis plane for pathing         |
+  |     `Position Offset`      |Sets the position offset for the grid as a hole  |
+  |                            |                                                 |
+  |        `NodeType`          |    Hexagon or Square grid layout/offset         |
+  |    `Surface Grid Size`     |       Set the number of the grid cells          |
+  |       `Node Radius`        |     Sets the size of the each grid cell         |
+  |                            |                                                 |
+  |      `Include Layers`      |Set what layers should be scanned for obstacles  |
+  |    `Collection Objects`    |     Set local or global scan for obstacles      |
+  |`Obstacle Proximity Penalty`|Set the pentaly cost for pathing near an obstacle|
+  |                            |                                                 |
+  |      `Display Grid`        |          Toggle debug grid visablity            |
+  |  `Display Penalty Cost`    |         Toggle debug penalty visablity          |
+  |  `Display Grid Position`   |      Toggle debug grid position visablity       |
 
 
-</div>
+  </div>
 </div>
 
 </br>
+</br>
+</br>
+</br>
+</br>
 
-## ⚡ Quick setup
+```csharp
+var s = "csharp syntax highlighting";
+alert(s);
+```
+
 ***
+<div id="header" align="center">
+  <h3 align="center">Navi Unit</h3>
+</div>
+
+
+
+<div align="center">
+  <img align="left" src="https://github.com/KeiTagura/Navi_Tech/blob/main/Inspector_NaviUnit.png" width="300" />
+
+  <div align="left">
+
+  |         Parameter          |                    Details                          |
+  | :------------------------: | :-------------------------------------------------: |
+  |          `Target`          |           Traget transform to move towards          |
+  |       `Nav Unit Data`      |  Contains the setting for the Nave Units behaviour  |
+  |        `Step Forward`      |  Is toggled if the unit should move this turn       |
+  |      `Auto Update Path`    |Set if Navi Unit should auto update path continuously|
+  |                            |                                                     |
+
+
+  </div>
+</div>
+
+</br>
+</br>
+</br>
+</br>
+</br>
+
+```csharp
+///
+///Example for controlling the NaviUnit via code
+///
+
+NaviUnit nUnit;
+Vector3 newPos;
+Transform tragetTransform;
+
+
+void Start()
+  {
+      nUnit = GetComponent<NaviUnit>();
+
+      if(!nUnit) return;
+
+      //Manualy sets the new target postion via world position
+      nUnit.SetDestination(newPos);
+      
+      //Manualy sets the new target by setting a target transform to follow
+      nUnit.SetTarget(tragetTransform);
+  }
+
+
+```
