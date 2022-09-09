@@ -33,6 +33,10 @@
   <img align = "left" src="https://github.com/KeiTagura/Navi_Tech/blob/main/Inspector_NaviSurface.png" width="400" />
   <img align = "left" src="https://github.com/KeiTagura/Navi_Tech/blob/main/Inspector_NaviSurface.png" width="400" />
 </div>
+
+
+## 🔧 Navi Components
 [![NaviSurface](https://github.com/KeiTagura/Navi_Tech/blob/main/Inspector_NaviSurface.png "NaviSurface Inspector")]
+
 
 
