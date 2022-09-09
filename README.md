@@ -35,6 +35,27 @@
 </div>
 
 
+
+
+
+|         Parameter          |                    Details                      |
+| :------------------------: | :---------------------------------------------: |
+|          `Plane`           |         Sets the axis plane for pathing         |
+|     `Position Offset`      |Sets the position offset for the grid as a hole  |
+|                            |                                                 |
+|        `NodeType`          |    Hexagon or Square grid layout/offset         |
+|    `Surface Grid Size`     |       Set the number of the grid cells          |
+|       `Node Radius`        |     Sets the size of the each grid cell         |
+|                            |                                                 |
+|      `Include Layers`      |Set what layers should be scanned for obstacles  |
+|    `Collection Objects`    |     Set local or global scan for obstacles      |
+|`Obstacle Proximity Penalty`|Set the pentaly cost for pathing near an obstacle|
+|                            |                                                 |
+|      `Display Grid`        |          Toggle debug grid visablity            |
+|  `Display Penalty Cost`    |         Toggle debug penalty visablity          |
+|  `Display Grid Position`   |      Toggle debug grid position visablity       |
+
+
 ## 🔧 Navi Components
 [![NaviSurface](https://github.com/KeiTagura/Navi_Tech/blob/main/Inspector_NaviSurface.png "NaviSurface Inspector")]
 
