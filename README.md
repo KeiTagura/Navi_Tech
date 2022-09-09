@@ -1,5 +1,5 @@
 <div id="header" align="center">
-  <img src="https://github.com/KeiTagura/Navi_Tech/blob/main/Art/MonSli.gif" width="100"/>
+  <img src="https://github.com/KeiTagura/Navi_Tech/blob/main/Art/MonSli.gif" width="82"/>
   <h3 align="center">KeiTagura</h3>
 </div>
 
