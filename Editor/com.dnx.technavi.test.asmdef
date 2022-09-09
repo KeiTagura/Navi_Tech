@@ -1,0 +1,16 @@
+{
+    "name": "com.dnx.technavi.test",
+    "rootNamespace": "",
+    "references": [
+        "GUID:6ce587acadc593a499cb332865e90d65"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

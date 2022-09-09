@@ -1,1 +1,1 @@
-# Navi_Tech
+# Tech_Navi

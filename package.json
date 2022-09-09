@@ -1,0 +1,23 @@
+{
+  "name": "com.dnx.tech_navi",
+  "version": "0.9.1",
+  "displayName": "Tech Navi",
+  "description": "Turnbased Grid Navigation System",
+  "unity": "2021.3",
+  "unityRelease": "7f1",
+  "documentationUrl": "https://github.com/KeiTagura",
+  "changelogUrl": "https://example.com/changelog.html",
+  "licensesUrl": "https://example.com/licensing.html",
+  "keywords": [
+    "dnx",
+    "navi",
+    "navigation",
+    "ai"
+  ],
+  "author": {
+    "name": "Kei",
+    "email": "unity@example.com",
+    "url": "https://github.com/KeiTagura"
+  },
+  "type": "tool"
+}
