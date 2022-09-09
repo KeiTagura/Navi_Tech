@@ -29,13 +29,13 @@
 
 ## 🔧 Navi Components
 
-<div align="center">
+<div align="left">
   <img src="https://github.com/KeiTagura/Navi_Tech/blob/main/Inspector_NaviSurface.png" width="300" />
 </div>
 
 
 <br/>
-<div align="center">
+<div align="left">
 
 |         Parameter          |                    Details                      |
 | :------------------------: | :---------------------------------------------: |
