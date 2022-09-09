@@ -57,7 +57,5 @@
 </div>
 </br>
 
-<div align="center">
-  
-</div>
+## ⚡ Quick setup
 ***
