@@ -35,7 +35,7 @@
 
 
 <br/>
-
+<div align="center">
 
 |         Parameter          |                    Details                      |
 | :------------------------: | :---------------------------------------------: |
@@ -55,6 +55,6 @@
 |  `Display Grid Position`   |      Toggle debug grid position visablity       |
 
 
-
+</div>
 
 
