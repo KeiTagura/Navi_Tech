@@ -34,7 +34,6 @@
 </div>
 
 
-<br/>
 <div align="left">
 
 |         Parameter          |                    Details                      |
