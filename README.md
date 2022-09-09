@@ -29,7 +29,7 @@
 
 ## 🔧 Navi Components
 
-<div align="left">
+<div align="center">
   <img align="left" src="https://github.com/KeiTagura/Navi_Tech/blob/main/Inspector_NaviSurface.png" width="300" />
 </div>
 
