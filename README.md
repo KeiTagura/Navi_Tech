@@ -5,7 +5,6 @@
 
 <h1>
   Tech Navi
-  <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px"/>
 </h1>
 
 
@@ -110,7 +109,7 @@ alert(s);
 
 NaviUnit nUnit;
 Vector3 newPos;
-Transform tragetTransform;
+Transform targetTransform;
 
 
 void Start()
@@ -123,7 +122,7 @@ void Start()
       nUnit.SetDestination(newPos);
       
       //Manualy sets the new target by setting a target transform to follow
-      nUnit.SetTarget(tragetTransform);
+      nUnit.SetTarget(targetTransform);
   }
 
 
