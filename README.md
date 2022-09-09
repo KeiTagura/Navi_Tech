@@ -30,12 +30,11 @@
 ## 🔧 Navi Components
 
 <div align="center">
-  <img align = "left" src="https://github.com/KeiTagura/Navi_Tech/blob/main/Inspector_NaviSurface.png" width="400" />
-
+  <img src="https://github.com/KeiTagura/Navi_Tech/blob/main/Inspector_NaviSurface.png" width="300" />
 </div>
 
 
-
+<br/>
 
 
 |         Parameter          |                    Details                      |
@@ -56,8 +55,6 @@
 |  `Display Grid Position`   |      Toggle debug grid position visablity       |
 
 
-## 🔧 Navi Components
-[![NaviSurface](https://github.com/KeiTagura/Navi_Tech/blob/main/Inspector_NaviSurface.png "NaviSurface Inspector")]
 
 
 
