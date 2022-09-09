@@ -29,6 +29,7 @@ public class NaviObstacle : MonoBehaviour
         }
     private void OnEnable()
         {
+            navsurfaces = new NaviSurface[0];
             lastPos = transform.position;
             lastScale = transform.localScale.magnitude + transform.lossyScale.magnitude; 
             navsurfaces = FindObjectsOfType<NaviSurface>();
@@ -47,6 +48,7 @@ public class NaviObstacle : MonoBehaviour
                 {
                     navsurfaces[i].RemoveFromObserver(this);
                 }
+            navsurfaces = new NaviSurface[0];
         }
     /*
     private void _Update()

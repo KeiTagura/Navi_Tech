@@ -109,7 +109,7 @@ public class NaviSurface : MonoBehaviour
 	Vector3 oldPos;
 	List<Node> oldNodeList;
 	//Card_Interaction oldCard;
-	public GameObject groundViz;
+	public GameObject groundVizPivot;
 	public NaviSurfaceObserver naviSurfaceObserver;
 	float oldSize;
 
@@ -127,7 +127,7 @@ public class NaviSurface : MonoBehaviour
 			pathRequestInstance = new PathRequest_Manager();
 			surface = this;
 			
-			ResizeViz(groundViz);
+			ResizeViz(groundVizPivot);
 		}
 
 	public void AddToObserver(NaviObstacle _naviObstacle)
@@ -147,7 +147,7 @@ public class NaviSurface : MonoBehaviour
 
 			if(surfaceGridSize.y < 1)
 				surfaceGridSize.y = 1;	
-			ResizeViz(groundViz);
+			ResizeViz(groundVizPivot);
         }
 	private void ResizeViz(GameObject viz)
 		{
@@ -164,8 +164,8 @@ public class NaviSurface : MonoBehaviour
 		}
 	private void ReposViz(Vector3 pos)
 		{
-			if(groundViz)
-				groundViz.transform.GetChild(0).transform.localPosition = pos;			
+			if(groundVizPivot)
+				groundVizPivot.transform.GetChild(0).transform.localPosition = pos;				
 		}
     public static void RequestPath(RequestData requestData, Action<CallBackData> callback)
 		{
