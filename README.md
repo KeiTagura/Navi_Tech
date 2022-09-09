@@ -1,7 +1,6 @@
 <div id="header" align="center">
   <img src="https://github.com/KeiTagura/Navi_Tech/blob/main/Art/MonSli.gif" width="100"/>
-  <br/>
-  KeiTagura
+  <h3 align="center">KeiTagura</h3>
 </div>
 
 <h1>
