@@ -1,12 +1,26 @@
-//# Tech_Navi
+
 
 <h1>
   Tech Navi
   <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px"/>
 </h1>
 
+<p align="center">
+  A turn and/or grid based AI Navigation system.
+</p>
+
+
+
 <div align="center">
-  <img src="https://github.com/KeiTagura/Navi_Tech/blob/main/Art/Navi.png" width="600" height="300"/>
+  <img src="https://github.com/KeiTagura/Navi_Tech/blob/main/Art/Navi.png" width="400" />
 </div>
 
-[![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=your-github-username&theme=dark&background=000000)](https://git.io/streak-stats)
+
+## ⚡ Quick setup
+
+1. Add a NavSurface PreFab to the scene.
+2. Add a NavUnit PreFab onto the NavSurface.
+3. For Obstacles 
+
+
+
