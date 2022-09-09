@@ -11,7 +11,7 @@ public class NaviSurfaceEditor : Editor
     //public float oldVal = 0;
     public override void OnInspectorGUI()
         {
-         // DrawDefaultInspector();
+          DrawDefaultInspector();
 
 
         //EditorGUILayout.BeginHorizontal();

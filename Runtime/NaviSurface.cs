@@ -162,6 +162,11 @@ public class NaviSurface : MonoBehaviour
 
 			viz.transform.localScale = offsetCalc;
 		}
+	private void ReposViz(Vector3 pos)
+		{
+			if(groundViz)
+				groundViz.transform.GetChild(0).transform.localPosition = pos;			
+		}
     public static void RequestPath(RequestData requestData, Action<CallBackData> callback)
 		{
 			//requestData.pathRequest = pathRequest;
@@ -227,51 +232,57 @@ public class NaviSurface : MonoBehaviour
 							calcOffset.x = (gridSizeX * axisOffset) - axisOffset;
 							calcOffset.y = axisOffset + ((gridSizeY - 1) * nodeRadius);
 							pos -= VectorOffset(calcOffset);
+							ReposViz(new Vector3(0f, 0.5f, -0.5f));
 						break;
 					case PositionOffset.BottomLeft:
 							calcOffset.x = axisOffset + ((gridSizeY - 1) * nodeRadius );
 							calcOffset.y = axisOffset + ((gridSizeY - 1) * nodeRadius);
 							pos -= VectorOffset(calcOffset);
+							ReposViz(new Vector3(-0.5f, 0.5f, -0.5f));
 
 						break;
 					case PositionOffset.BottomRight:
 							calcOffset.x = axisOffset * -1;
 							calcOffset.y = axisOffset + ((gridSizeY - 1) * nodeRadius);
 							pos -= VectorOffset(calcOffset);
+							ReposViz(new Vector3(0.5f, 0.5f, -0.5f));
 						break;
 					case PositionOffset.Center:
 							calcOffset.x = (gridSizeX * axisOffset) - axisOffset ;
 							calcOffset.y = (gridSizeY * axisOffset) - axisOffset ;
 							pos -= VectorOffset(calcOffset);
+							ReposViz(new Vector3(0f, 0.5f, 0f));
 						break;
 					case PositionOffset.CenterLeft:
 							calcOffset.x = axisOffset + ((gridSizeY - 1) * nodeRadius );
 							calcOffset.y = (gridSizeY * axisOffset) - axisOffset;
-
 							pos -= VectorOffset(calcOffset);
+							ReposViz(new Vector3(-0.5f, 0.5f, 0f));
 						break;
 					case PositionOffset.CenterRight:
 							calcOffset.x = axisOffset * -1;
 							calcOffset.y = (gridSizeY * axisOffset) - axisOffset;
 
 							pos -= VectorOffset(calcOffset);
+							ReposViz(new Vector3(0.5f, 0.5f, 0f));
 						break;
 					case PositionOffset.TopCenter:
 							calcOffset.x = (gridSizeX * axisOffset) - axisOffset;
 							calcOffset.y = axisOffset - nodeRadius ;
 							pos -= VectorOffset(calcOffset);
-
+							ReposViz(new Vector3(0, 0.5f, 0.5f));
 						break;
 					case PositionOffset.TopLeft:
 							calcOffset.x = axisOffset + ((gridSizeY - 1) * nodeRadius );
 							calcOffset.y = axisOffset - nodeRadius ;
-
 							pos -= VectorOffset(calcOffset);
+							ReposViz(new Vector3(-0.5f, 0.5f, 0.5f));
 						break;
 					case PositionOffset.TopRight:
 							calcOffset.x = axisOffset * -1;
 							calcOffset.y = axisOffset - nodeRadius ;
 							pos -= VectorOffset(calcOffset);
+							ReposViz(new Vector3(0.5f, 0.5f, 0.5f));
 					break;
 					default:
 					break;
