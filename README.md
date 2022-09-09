@@ -71,6 +71,7 @@
 var s = "csharp syntax highlighting";
 alert(s);
 ```
+</br>
 
 ***
 <div id="header" align="center">
@@ -127,3 +128,9 @@ void Start()
 
 
 ```
+
+<br/>
+***
+<div id="header" align="center">
+  <h3 align="center">Navi Obstacle</h3>
+</div>
