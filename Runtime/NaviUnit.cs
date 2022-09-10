@@ -61,8 +61,8 @@ public class NaviUnit : MonoBehaviour
 			StopAllCoroutines();
 			if (autoUpdatePath)
 				{
-			//	StopAllCoroutines();
-				StartCoroutine(AutoUpdatePath());
+				//	StopAllCoroutines();
+					StartCoroutine(AutoUpdatePath());
 				}
 			else
 				ManualUpdatePath();
@@ -81,23 +81,23 @@ public class NaviUnit : MonoBehaviour
 					yield return new WaitForSeconds(.001f);
 				}
 
-		yield return new WaitForSeconds(minPathUpdateTime);
+			yield return new WaitForSeconds(minPathUpdateTime);
 
-		RequestData requestData = new RequestData { pathStart = transform.position, pathEnd =destination, includeDiagonal = navUnitData.settings.canCrossDiagonal, simplifyPath = navUnitData.settings.canCrossDiagonal };
+			RequestData requestData = new RequestData { pathStart = transform.position, pathEnd =destination, includeDiagonal = navUnitData.settings.canCrossDiagonal, simplifyPath = navUnitData.settings.canCrossDiagonal };
 
-		NaviSurface.RequestPath(requestData, OnPathFound);
+			NaviSurface.RequestPath(requestData, OnPathFound);
 
-		while (true)
+			while (true)
 				{
 					yield return new WaitForSeconds(minPathUpdateTime);
 
-			if (target)
-                {
-				destination = target.position;
+					if (target)
+						{
+							destination = target.position;
 
-				//Debug.Log("hasTarget : " + destination);
+							//Debug.Log("hasTarget : " + destination);
 
-                }
+						}
 
 					//yield return new WaitUntil(() => HasMoved(lastDestination, destination) == true);
 					//yield return new WaitUntil(() => HasMoved(lastDestination, destination) == true);
@@ -253,7 +253,7 @@ public class NaviUnit : MonoBehaviour
 		{
 		if (path != null)
 			{
-			path.DrawWithGizmos();
+				path.DrawWithGizmos();
 			}
 		}
 

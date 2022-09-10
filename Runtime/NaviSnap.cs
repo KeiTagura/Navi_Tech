@@ -7,10 +7,16 @@ public class NaviSnap : MonoBehaviour
         public NaviSurface surface;
         public bool snap = false;
         public Vector3 lastSnapPos;
-    
+            
+        ///Make it snap to the nearest viable surfacegrid point when out of bounds
+
+
+
         private void OnEnable()
             {
               //  lastSnapPos = SnapToGrid.GetNearestGridPoint(transform.position, surface, out bool walkable);  
+
+                lastSnapPos = transform.position;
             }
        public void Snap()
             {

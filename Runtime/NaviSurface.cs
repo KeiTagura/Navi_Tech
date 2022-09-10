@@ -181,11 +181,11 @@ public class NaviSurface : MonoBehaviour
 					return gridSizeX * gridSizeY;
 				}
 		}
-	public float RoundVal(float val)
+	private float RoundVal(float val)
 		{
 			return (float)Math.Round(val / nodeRadius, MidpointRounding.AwayFromZero) * nodeRadius;
 		}
-	public Vector3 SwitchPlane(Plane _plane, Vector3 pos, bool round = false, Transform offset = null)
+	private Vector3 SwitchPlane(Plane _plane, Vector3 pos, bool round = false, Transform offset = null)
 		{
 			switch (_plane)
 				{
@@ -214,7 +214,7 @@ public class NaviSurface : MonoBehaviour
 
 					return pos;
 			}
-    public Vector3 CalcPositionOffset(PositionOffset posOffset, Vector3 pos)
+    private Vector3 CalcPositionOffset(PositionOffset posOffset, Vector3 pos)
         {
 			float axisOffset = (nodeRadius * 0.5f);
 			Vector3 calVal = new Vector3
@@ -290,7 +290,7 @@ public class NaviSurface : MonoBehaviour
 
 			return pos;
         }
-	public Vector3 VectorOffset(Vector2 offset)
+	private Vector3 VectorOffset(Vector2 offset)
 		{
 			Vector3 offsetCalc = new Vector3
 				(
@@ -340,7 +340,7 @@ public class NaviSurface : MonoBehaviour
 
 			BlurPenaltyMap(3);
 		}
-	public int  ObstacleSearch(Vector3 worldPoint, float searchRadius, out bool walkable)
+	private int  ObstacleSearch(Vector3 worldPoint, float searchRadius, out bool walkable)
         {
 			int movementPenalty = 0;
 			Vector3 point = worldPoint + Vector3.up * 80;
@@ -374,7 +374,7 @@ public class NaviSurface : MonoBehaviour
 			walkable = true;
 			return movementPenalty;
         }
-	public void BlurPenaltyMap(int blurSize)
+	private void BlurPenaltyMap(int blurSize)
 		{
 			if (gridSizeX <= blurSize || gridSizeY <= blurSize)
 				return;
@@ -464,6 +464,13 @@ public class NaviSurface : MonoBehaviour
 				}
 			return neighbours;
 		}
+
+	/// <summary>
+	/// 
+	/// </summary>
+	/// <param name="worldPos">The position of the current object to be snapped.</param>
+	/// <param name="convertToLocalSpace">Should the returned node be in the NaviSurface's local position (defaulted to FALSE)</param>
+	/// <returns></returns>
 	public Node WorldToGridPos(Vector3 worldPos, bool convertToLocalSpace = true)
 		{
 			float axisOffset = (nodeRadius * 0.5f);
@@ -597,7 +604,7 @@ public class NaviSurface : MonoBehaviour
                 }
             }
 		}
-	public void OnPathFound(CallBackData callBackData)
+	private void OnPathFound(CallBackData callBackData)
 		{
 			searchPass++;
 
@@ -654,7 +661,7 @@ public class NaviSurface : MonoBehaviour
 						setSearchComplete = false;
 					}
 		}
-	public void ShowViableNodes( RectTransform card, bool show)
+	private void ShowViableNodes( RectTransform card, bool show)
         {
 			if(show)
 				{

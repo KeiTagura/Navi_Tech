@@ -19,5 +19,5 @@ MonoBehaviour:
     stoppingDist: 0
     stepLimit: 10
     stepSpeed: 0.2
-    canCrossDiagonal: 1
+    canCrossDiagonal: 0
     simplifyPath: 0
