@@ -248,7 +248,8 @@ public class NaviUnit : MonoBehaviour
 		}
 
 
-	public void OnDrawGizmos()
+#if UNITY_EDITOR
+    public void OnDrawGizmos()
 		{
 		if (path != null)
 			{
@@ -256,6 +257,7 @@ public class NaviUnit : MonoBehaviour
 			}
 		}
 
-	}
+#endif
+    }
 
 
