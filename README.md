@@ -36,9 +36,9 @@
 
 
 <div align="center">
-  <img align="left" src="https://github.com/KeiTagura/Navi_Tech/blob/main/Inspector_NaviSurface.png" width="300" />
+  <img align="center" src="https://github.com/KeiTagura/Navi_Tech/blob/main/Inspector_NaviSurface.png" width="300" />
 
-  <div align="left">
+  <div align="center">
 
   |         Parameter          |                    Details                      |
   | :------------------------: | :---------------------------------------------: |
@@ -81,9 +81,9 @@ alert(s);
 
 
 <div align="center">
-  <img align="left" src="https://github.com/KeiTagura/Navi_Tech/blob/main/Inspector_NaviUnit.png" width="300" />
+  <img align="center" src="https://github.com/KeiTagura/Navi_Tech/blob/main/Inspector_NaviUnit.png" width="300" />
 
-  <div align="left">
+  <div align="center">
 
   |         Parameter          |                    Details                          |
   | :------------------------: | :-------------------------------------------------: |
