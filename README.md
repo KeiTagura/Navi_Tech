@@ -131,7 +131,17 @@ public void CreateGrid()
 </br>
 </br>
 </br>
+
 </br>
+```csharp
+//Manualy sets the new target postion via world position
+ public void SetDestination(Vector3 val);
+```
+
+```csharp
+//Manualy sets the new target by setting a target transform to follow
+ public void SetTarget(Transform val);
+```
 
 ```csharp
 ///
@@ -149,10 +159,7 @@ void Start()
 
       if(!nUnit) return;
 
-      //Manualy sets the new target postion via world position
-      nUnit.SetDestination(newPos);
-      
-      //Manualy sets the new target by setting a target transform to follow
+      nUnit.SetDestination(newPos);      
       nUnit.SetTarget(targetTransform);
   }
 
