@@ -68,9 +68,39 @@
 </br>
 
 ```csharp
-var s = "csharp syntax highlighting";
-alert(s);
+
+///
+/// WorldToGridPos returns nearest grid point
+///
+public Node WorldToGridPos(Vector3 worldPos, bool convertToLocalSpace = true);
 ```
+
+
+
+```csharp
+///
+/// NaviSurface via code
+///
+
+NaviSurface nSurface;
+GameObject obj;
+
+void Start()
+  {
+      nSurface = GetComponent<NaviSurface>();
+      
+      Node nearestNode = nSurface.WorldToGridPos(object.transform.position);
+      
+      obj.transform.position = node.worldPosition;
+  }
+```
+
+
+
+```csharp
+public void CreateGrid()
+```
+
 </br>
 
 ***
