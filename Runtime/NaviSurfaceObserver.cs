@@ -42,6 +42,8 @@ public class NaviSurfaceObserver : MonoBehaviour
 
     void Update()
         {
+            if(naviSurface == null) naviSurface = GetComponent<NaviSurface>();
+
             for (int i = 0; i < naviObstacles.Count; i++)
                 {
                     

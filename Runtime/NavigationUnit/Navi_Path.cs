@@ -43,7 +43,9 @@ public class Navi_Path {
 		return new Vector2 (v3.x, v3.z);
 	}
 
-	Vector3 size =  Vector3.one;
+	Vector3 size =  Vector3.one; 
+
+#if UNITY_EDITOR
 	public void DrawWithGizmos() {
 		Gizmos.color = Color.green;
 		foreach (Vector3 p in lookPoints) {
@@ -68,6 +70,7 @@ public class Navi_Path {
 		}
 
 		SortedGizmos.BatchCommit();
-	}
+        }
+#endif
 
-}
+    }

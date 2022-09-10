@@ -691,7 +691,9 @@ public class NaviSurface : MonoBehaviour
 	public bool displayGridPosition = true;
 	public bool displayPenaltyCost = true;
 	public bool displayGrid = true;
-	void OnDrawGizmos()
+
+#if UNITY_EDITOR
+    void OnDrawGizmos()
 		{
 			Vector3 nodePosSwaped = new Vector3();
 			float scale = 0.2f;
@@ -737,5 +739,6 @@ public class NaviSurface : MonoBehaviour
 						}
 				}
 			lastframeNWIRCount = nodesWithInRange.Count;
-		}
-}
+        }
+#endif
+    }
