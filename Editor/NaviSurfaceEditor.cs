@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+#if UNITY_EDITOR
 using UnityEngine;
 using UnityEditor;
+
 
 
 [CustomEditor(typeof(NaviSurface))]
@@ -159,3 +161,4 @@ public class NaviSurfaceEditor : Editor
         serializedObject.ApplyModifiedProperties();
         }
     }
+#endif

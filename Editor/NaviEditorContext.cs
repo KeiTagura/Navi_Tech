@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+#if UNITY_EDITOR
 using UnityEngine;
 using UnityEditor;
 using UnityEngine.UIElements;
@@ -7,6 +8,7 @@ using log4net.Util;
 
 public static class NaviEditorContext
 {
+
     [MenuItem("GameObject/Navi/NaviSurface", false, 11)]
     public static void CreateNaviSurface()
         {
@@ -68,4 +70,6 @@ public static class NaviEditorContext
             naviObservable.AddComponent<NaviObstacle>();
             
         }
-}
+    }
+
+#endif

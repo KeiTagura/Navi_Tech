@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Transactions;
+#if UNITY_EDITOR
 using UnityEditor;
 using UnityEngine;
 
@@ -81,3 +82,4 @@ public class NaviUnitEditor : Editor
         // base.DrawDefaultInspector();
         }
     }
+#endif
