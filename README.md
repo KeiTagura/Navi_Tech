@@ -98,6 +98,11 @@ void Start()
 
 
 ```csharp
+///
+/// Use this to (Re)Create/(Re)Calculate the NaviSurface Node space
+/// Is called on inital Navsurface create/modification as well when obstales postions have moved.
+///
+
 public void CreateGrid()
 ```
 
