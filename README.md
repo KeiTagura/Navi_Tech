@@ -178,7 +178,10 @@ void Start()
 <div id="header" align="center">
   <h3 align="center">Navi Obstacle</h3>
 </div>
+<div align="center">
 
   |         Parameter          |                    Details                          |
   | :------------------------: | :-------------------------------------------------: |
   |      `ObstacleData`        | You can set the Obstacle pramaters with a Scriptable|
+  
+</div>
