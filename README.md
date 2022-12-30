@@ -16,7 +16,21 @@
 <p align="center">
   A turn and/or grid based AI Navigation system.
 </p>
+## Installation
 
+### Git URL
+
+Project supports Unity Package Manager. To install the project as a Git package do the following:
+
+1. In Unity, open **Window** -> **Package Manager**.
+2. Press the **+** button, choose "**Add package from git URL...**"
+3. Enter "https://github.com/KeiTagura/Navi_Tech.git" and press **Add**.
+
+### Unity Package
+Alternatively, you can add the code directly to the project:
+
+1. Clone the repo or download the latest release.
+2. Add the Navi_Tech folder to your Unity project or import the .unitypackage
 
 ## ⚡ Quick setup
 
