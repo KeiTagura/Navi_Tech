@@ -11,7 +11,7 @@ using UnityEngine.Analytics;
 
 public class NaviSnapEditor : Editor
 {
-
+    //Vector3 lastPos;
     public override void OnInspectorGUI()
         {
 
@@ -26,9 +26,10 @@ public class NaviSnapEditor : Editor
            // EditorGUILayout.PropertyField(_lastSnapPos);
             serializedObject.ApplyModifiedProperties();
             
-            _targetScript.snap = EditorGUILayout.Toggle("Continuous Snapping", _targetScript.snap);
-
-            if(_targetScript.snap)
+            //bool resnap = _targetScript.transform.position != lastPos ? true : false;
+            _targetScript.snap = EditorGUILayout.Toggle("Continuous Snapping", _targetScript.snap);//&& resnap ? true : false;
+            //lastPos =_targetScript.transform.position;
+            if (_targetScript.snap)
                 {
                     _targetScript.Snap();
                 }

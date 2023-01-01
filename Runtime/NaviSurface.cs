@@ -5,6 +5,10 @@ using UnityEditor;
 using System;
 using Unity.VisualScripting;
 
+/// <summary>
+/// NOTE: Position offset only works when set to [Top Right]
+/// The other options still need to be implemented
+/// </summary>
 [System.Serializable] public enum CollectObjects
     {
 		All,

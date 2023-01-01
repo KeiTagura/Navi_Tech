@@ -165,16 +165,16 @@ public class NaviUnit : MonoBehaviour
 
 	public void OnPathFound(CallBackData callBackData)
 		{
-		SO_NaviUnitData.Settings settings = navUnitData.settings;
+			SO_NaviUnitData.Settings settings = navUnitData.settings;
 
-		if (callBackData.pathSuccessful)
-			{
-			path = new Navi_Path(callBackData.waypoints, transform.position, settings.turnDst, settings.stoppingDist);
+			if (callBackData.pathSuccessful)
+				{
+					path = new Navi_Path(callBackData.waypoints, transform.position, settings.turnDst, settings.stoppingDist);
 
-			StopCoroutine(FollowPath());
-			//StopAllCoroutines();
-			StartCoroutine(FollowPath());
-			}
+					StopCoroutine(FollowPath());
+					//StopAllCoroutines();
+					StartCoroutine(FollowPath());
+				}
 
 		}
 

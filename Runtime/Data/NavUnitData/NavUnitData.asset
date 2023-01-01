@@ -17,7 +17,7 @@ MonoBehaviour:
     turnSpeed: 360
     turnDst: 0
     stoppingDist: 0
-    stepLimit: 10
+    stepLimit: 1000
     stepSpeed: 0.2
     canCrossDiagonal: 0
-    simplifyPath: 0
+    simplifyPath: 1
