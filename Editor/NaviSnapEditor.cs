@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Analytics;
+using UnityEngine.Events;
 
 [CustomEditor(typeof(NaviSnap))]
 [CanEditMultipleObjects]
@@ -14,11 +15,10 @@ public class NaviSnapEditor : Editor
     //Vector3 lastPos;
     public override void OnInspectorGUI()
         {
-
+        
+           // base.OnInspectorGUI();
             NaviSnap _targetScript = (NaviSnap)target;
             
-            
-
             SerializedProperty _surface = serializedObject.FindProperty("surface");
             EditorGUILayout.PropertyField(_surface);
 
@@ -28,10 +28,25 @@ public class NaviSnapEditor : Editor
             
             //bool resnap = _targetScript.transform.position != lastPos ? true : false;
             _targetScript.snap = EditorGUILayout.Toggle("Continuous Snapping", _targetScript.snap);//&& resnap ? true : false;
+
+        
+         //base.OnInspectorGUI();
+
+            SerializedProperty snapEvent = serializedObject.FindProperty("snapEvent");            
+           // EditorGUIUtility.LookLikeControls();
+            EditorGUILayout.PropertyField(snapEvent);
+ 
+             if(GUI.changed)
+                 {
+                     serializedObject.ApplyModifiedProperties();
+                 }
+            
             //lastPos =_targetScript.transform.position;
             if (_targetScript.snap)
                 {
                     _targetScript.Snap();
+                    
+                    _targetScript.snapEvent.Invoke();
                 }
 
             EditorGUILayout.Space(20);

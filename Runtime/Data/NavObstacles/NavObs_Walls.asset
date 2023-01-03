@@ -16,4 +16,4 @@ MonoBehaviour:
   penalty: 2
   penaltySmoothing: 3
   dynamicObstacle: 1
-  movementThreshold: 0.01
+  movementThreshold: 1

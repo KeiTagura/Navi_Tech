@@ -5,6 +5,12 @@ using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.Events;
 
+
+[System.Serializable]
+public class v2IntEvent : UnityEvent<Vector2Int>
+    {
+    }
+
 public class NaviUnit : MonoBehaviour
 {
     public Transform target;
@@ -24,7 +30,7 @@ public class NaviUnit : MonoBehaviour
 	Vector3 lastDestination;
 
 	[HideInInspector]
-	public UnityEvent navUnitStepped;
+	public v2IntEvent navUnitStepped;
 
 
 
@@ -49,6 +55,11 @@ public class NaviUnit : MonoBehaviour
 			target = val;
 			RunUpdatePath();
         }
+
+	public void StopNaviUnit()
+		{
+			stepForward = false;
+		}
 
 	public void RunUpdatePath()
         {
@@ -211,7 +222,7 @@ public class NaviUnit : MonoBehaviour
 									pathIndex++;
 									currentSteps++;
 									
-									navUnitStepped.Invoke();
+									navUnitStepped.Invoke(new Vector2Int((int)transform.position.x, (int)transform.position.z));
 
 									yield return new WaitForSeconds(settings.stepSpeed);
 
