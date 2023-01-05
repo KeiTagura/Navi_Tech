@@ -7,7 +7,7 @@ using UnityEngine.Events;
 
 
 [System.Serializable]
-public class v2IntEvent : UnityEvent<Vector2Int>
+public class v3Event : UnityEvent<Vector3>
     {
     }
 
@@ -17,6 +17,7 @@ public class NaviUnit : MonoBehaviour
 	public Vector3 destination;
 	public bool arrived = true;
 
+	[HideInInspector]
 	public bool stepForward = false;
 	public bool autoUpdatePath = false;
 
@@ -29,8 +30,7 @@ public class NaviUnit : MonoBehaviour
 	Navi_Path path;
 	Vector3 lastDestination;
 
-	[HideInInspector]
-	public v2IntEvent navUnitStepped;
+	public v3Event navUnitStepped;
 
 
 
@@ -105,7 +105,6 @@ public class NaviUnit : MonoBehaviour
 					if (target)
 						{
 							destination = target.position;
-
 							//Debug.Log("hasTarget : " + destination);
 
 						}
@@ -222,9 +221,10 @@ public class NaviUnit : MonoBehaviour
 									pathIndex++;
 									currentSteps++;
 									
-									navUnitStepped.Invoke(new Vector2Int((int)transform.position.x, (int)transform.position.z));
+									navUnitStepped.Invoke(transform.position);
+									
 
-									yield return new WaitForSeconds(settings.stepSpeed);
+                                    yield return new WaitForSeconds(settings.stepSpeed);
 
 									if (currentSteps > 0) // If currentSteps less than 0 then no step limit.
 										if (currentSteps >= settings.stepLimit)
