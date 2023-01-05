@@ -17,7 +17,6 @@ public class NaviUnit : MonoBehaviour
 	public Vector3 destination;
 	public bool arrived = true;
 
-	[HideInInspector]
 	public bool stepForward = false;
 	public bool autoUpdatePath = false;
 
@@ -30,6 +29,7 @@ public class NaviUnit : MonoBehaviour
 	Navi_Path path;
 	Vector3 lastDestination;
 
+	[HideInInspector]
 	public v3Event navUnitStepped;
 
 
