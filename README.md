@@ -186,6 +186,39 @@ void Start()
 
 ```
 
+
+```csharp
+//Manualy sets the new target postion via world position
+ public void SetDestination(Vector3 val);
+```
+
+```csharp
+//Manualy sets the new target by setting a target transform to follow
+ public void SetTarget(Transform val);
+```
+
+```csharp
+///
+///Example for controlling the NaviUnit via code
+///
+
+NaviUnit nUnit;
+Vector3 newPos;
+Transform targetTransform;
+
+
+void Start()
+  {
+      nUnit = GetComponent<NaviUnit>();
+
+      if(!nUnit) return;
+
+      nUnit.SetDestination(newPos);      
+      nUnit.SetTarget(targetTransform);
+  }
+
+
+```
 </br>
 
 ***
