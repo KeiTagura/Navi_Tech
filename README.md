@@ -39,7 +39,6 @@ Alternatively, you can add the code directly to the project:
 3. Add `NaviObstacle` onto `NaviSurface`, and set create/add a Scriptable `SO_NaviObstacleData` to it (Right Click > Create > Scriptables > NaviObstacle Data).
 
 
-
 ## 🔧 Navi Components
 ***
 
@@ -149,7 +148,6 @@ public void CreateGrid()
 </br>
 </br>
 </br>
-</br>
 
 
 
@@ -173,15 +171,15 @@ Vector3 newPos;
 Transform targetTransform;
 
 
-void Start()
-  {
-      nUnit = GetComponent<NaviUnit>();
+	void Start()
+	  {
+		  nUnit = GetComponent<NaviUnit>();
 
-      if(!nUnit) return;
+		  if(!nUnit) return;
 
-      nUnit.SetDestination(newPos);      
-      nUnit.SetTarget(targetTransform);
-  }
+		  nUnit.SetDestination(newPos);      
+		  nUnit.SetTarget(targetTransform);
+	  }
 
 
 ```
@@ -207,15 +205,15 @@ Vector3 newPos;
 Transform targetTransform;
 
 
-void Start()
-  {
-      nUnit = GetComponent<NaviUnit>();
+	void Start()
+	  {
+		  nUnit = GetComponent<NaviUnit>();
 
-      if(!nUnit) return;
+		  if(!nUnit) return;
 
-      nUnit.SetDestination(newPos);      
-      nUnit.SetTarget(targetTransform);
-  }
+		  nUnit.SetDestination(newPos);      
+		  nUnit.SetTarget(targetTransform);
+	  }
 
 
 ```
