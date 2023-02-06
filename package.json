@@ -1,6 +1,6 @@
 {
   "name": "com.dnx.tech_navi",
-  "version": "0.9.6",
+  "version": "0.9.7",
   "displayName": "Tech Navi",
   "description": "Turnbased Grid Navigation System",
   "unity": "2021.3",
