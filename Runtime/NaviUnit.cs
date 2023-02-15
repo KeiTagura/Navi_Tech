@@ -44,6 +44,10 @@ public class NaviUnit : MonoBehaviour
 		//	SetDestination(new Vector3(-41.1300011f, 0, -46.1100006f));
         }
 
+	public Navi_Path GetCalcualtedPath
+        {
+			get { return path; }
+        }
     public void SetDestination(Vector3 val)
         {
 			destination = val;
