@@ -97,27 +97,30 @@ public class NaviSurface : MonoBehaviour
 	public static PathRequest_Manager pathRequestInstance;
 	public static NaviSurface surface;
 	//public static bool simplifyPath = false;
+
+
+	public int discardPass = 0;
 	public bool displayGridGizmos;
 	public bool showViableNodes;
+    public bool showDebug = false;
+	public bool setSearchComplete = false;
+
+	public GameObject groundVizPivot;
+	public List<Node> nodesWithInRange = new List<Node>();
+	public List<int> perPathMoves = new List<int>();
+	public NaviSurfaceObserver naviSurfaceObserver;
+	public WithInRangeCahce withInRangeCahce = new WithInRangeCahce();
 
 	Navi_Path path;
-	public List<int> perPathMoves = new List<int>();
-	public WithInRangeCahce withInRangeCahce = new WithInRangeCahce();
+	float oldSize;
 	int searchPass = 0;
-	public int discardPass = 0;
 	int lastframeNWIRCount = 0;
-	public List<Node> nodesWithInRange = new List<Node>();
-	public bool setSearchComplete = false;
+	List<Node> oldNodeList;
 	List<Node> nodeNeighbours = new List<Node>();
 	Transform oldT;
 	Vector3 oldPos;
-	List<Node> oldNodeList;
 	//Card_Interaction oldCard;
-	public GameObject groundVizPivot;
-	public NaviSurfaceObserver naviSurfaceObserver;
-	float oldSize;
 
-    public bool showDebug = false;
     public float OldNavSize
 		{
 			set{ oldSize = value;  }
