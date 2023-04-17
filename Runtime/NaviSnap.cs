@@ -12,7 +12,7 @@ public class NaviSnap : MonoBehaviour
         
         ///Make it snap to the nearest viable surfacegrid point when out of bounds
 
-
+        public Vector3 snapOffset;
 
         private void OnEnable()
             {
@@ -45,7 +45,7 @@ public class NaviSnap : MonoBehaviour
                         lastSnapPos = pos;
                     }
                 else
-                    transform.position = lastSnapPos;
+                    transform.position = lastSnapPos + snapOffset;
                     
 
             }

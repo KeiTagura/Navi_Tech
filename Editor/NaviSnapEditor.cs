@@ -12,28 +12,22 @@ using UnityEngine.Events;
 
 public class NaviSnapEditor : Editor
 {
-    //Vector3 lastPos;
     public override void OnInspectorGUI()
         {
         
-           // base.OnInspectorGUI();
             NaviSnap _targetScript = (NaviSnap)target;
             
             SerializedProperty _surface = serializedObject.FindProperty("surface");
             EditorGUILayout.PropertyField(_surface);
 
-           // SerializedProperty _lastSnapPos = serializedObject.FindProperty("lastSnapPos");
-           // EditorGUILayout.PropertyField(_lastSnapPos);
             serializedObject.ApplyModifiedProperties();
             
-            //bool resnap = _targetScript.transform.position != lastPos ? true : false;
-            _targetScript.snap = EditorGUILayout.Toggle("Continuous Snapping", _targetScript.snap);//&& resnap ? true : false;
-
+            _targetScript.snap = EditorGUILayout.Toggle("Continuous Snapping", _targetScript.snap);
+            _targetScript.snapOffset = EditorGUILayout.Vector3Field("Snap Offset", _targetScript.snapOffset);
         
-         //base.OnInspectorGUI();
 
             SerializedProperty snapEvent = serializedObject.FindProperty("snapEvent");            
-           // EditorGUIUtility.LookLikeControls();
+            SerializedProperty snapOffset = serializedObject.FindProperty("snapOffset"); 
             EditorGUILayout.PropertyField(snapEvent);
  
              if(GUI.changed)
@@ -41,7 +35,6 @@ public class NaviSnapEditor : Editor
                      serializedObject.ApplyModifiedProperties();
                  }
             
-            //lastPos =_targetScript.transform.position;
             if (_targetScript.snap)
                 {
                     _targetScript.Snap();
