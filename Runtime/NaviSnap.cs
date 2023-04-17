@@ -36,16 +36,16 @@ public class NaviSnap : MonoBehaviour
                 //Vector3 pos = SnapToGrid.GetNearestGridPoint(transform.position ,surface, out bool walkable);
                 //Vector3 pos = surface.NodeFromWorldPoint(transform.position).worldPosition;
                 //Debug.Log(walkable);
-                Debug.Log(node.gridX + "-" + node.gridY);
+                //Debug.Log(node.gridX + "-" + node.gridY);
 
                 //snapEvent.Invoke();
                 if (node.walkable)
                             {
-                        transform.position = pos;
-                        lastSnapPos = pos;
+                        transform.position = pos + snapOffset;
+                        lastSnapPos = pos + snapOffset;
                     }
                 else
-                    transform.position = lastSnapPos + snapOffset;
+                    transform.position = lastSnapPos;
                     
 
             }
