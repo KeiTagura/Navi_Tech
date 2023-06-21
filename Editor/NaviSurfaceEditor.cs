@@ -26,6 +26,16 @@ public class NaviSurfaceEditor : Editor
          ///   EditorGUILayout.EndHorizontal();
          //   }
 
+        //EditorGUILayout.BeginHorizontal();
+       // try
+        //    {
+       //     SectionName = EditorGUILayout.TextField(SectionName, SectionNameStyle);
+        //    }
+        //finally
+        //    {
+         ///   EditorGUILayout.EndHorizontal();
+         //   }
+
         serializedObject.Update();
 
 

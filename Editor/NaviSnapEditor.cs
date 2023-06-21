@@ -24,7 +24,6 @@ public class NaviSnapEditor : Editor
             
             _targetScript.snap = EditorGUILayout.Toggle("Continuous Snapping", _targetScript.snap);
             _targetScript.snapOffset = EditorGUILayout.Vector3Field("Snap Offset", _targetScript.snapOffset);
-        
 
             SerializedProperty snapEvent = serializedObject.FindProperty("snapEvent");            
             SerializedProperty snapOffset = serializedObject.FindProperty("snapOffset"); 
