@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
+
 #if UNITY_EDITOR
 using UnityEngine;
 using UnityEditor;
-using UnityEngine.UIElements;
-using log4net.Util;
+
 
 public static class NaviEditorContext
 {
@@ -40,7 +38,7 @@ public static class NaviEditorContext
             Selection.objects = new Object[] { goSurf };
 
         }
-   //[MenuItem("Navi/MyMenu/Do Something", false, 0)]
+		
     [MenuItem("GameObject/Navi/NaviUnit", false, 10)]
     public static void CreateNavUnit()
         {
@@ -59,6 +57,7 @@ public static class NaviEditorContext
 
             naviUnitViz.hideFlags = HideFlags.HideInHierarchy;
         }
+		
     [MenuItem("GameObject/Navi/NaviObservable", false, 11)]
     public static void CreateNavObservable()
         {

@@ -20,9 +20,4 @@ public class SO_NaviUnitData : ScriptableObject
             }
 
         public Settings settings = new Settings();
-        
-        
-        
-        
-        
     }
