@@ -34,9 +34,11 @@ Alternatively, you can add the code directly to the project:
 
 ## ⚡ Quick setup
 
-1. Add a `NavSurface` PreFab to the scene.
-2. Add a `NavUnit` PreFab onto the NavSurface, and creat/add a Scritpable `SO_NaviUnitData` to it (Right Click > Create > Scriptables > NaviUnit Data).
-3. Add `NaviObstacle` onto `NaviSurface`, and set create/add a Scriptable `SO_NaviObstacleData` to it (Right Click > Create > Scriptables > NaviObstacle Data).
+1. Add a `NavSurface` PreFab to the scene (Menu Bar : GameObject > Navi > NaviSurface) / (In Hierarchy: Right Click > Navi > NaviSurface).
+2. Add a `NavUnit` PreFab onto the NavSurface, and (Menu Bar: GameObject > Navi > NaviSurface) / (In Hierarchy: Right Click > Navi > NaviSurface)
+3. Creat a ScritpableObject `SO_NaviUnitData` and add it to the to the created `NavUnit` in its inspector (In Asset Folder: Right Click > Create > Navi > SO > NaviUnit Data).
+4. Create a `NaviObstacle` (Menu Bar : GameObject > Navi > NaviObstacle) / (In Hierarchy: Right Click > Navi > NaviObstacle)
+5. Create/add a ScriptableObject `SO_NaviObstacleData` and add it to the to the created `NaviObstacle` in its inspector  to it (In Asset Folder: Right Click > Create > Navi > SO > NaviObstacle Data).
 
 
 ## 🔧 Navi Components
